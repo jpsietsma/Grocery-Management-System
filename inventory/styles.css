@@ -1,0 +1,102 @@
+.feed_head {
+
+    overflow: hidden;
+    border: #d9d9d9 solid 1px;
+    border-top: none;
+	background-color: #CDCDCD;
+    height: 28px;
+    line-height: 48px;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: normal;
+    text-align: center;
+	margin: 0;
+}
+
+.feed_head_header {
+
+	text-align: center;
+	width: 200px;
+	font-weight: bold;
+	text-decoration: smallcaps;
+	
+}
+
+.feed_head_header_itemNumber {
+
+	text-align: center;
+	width: 100px;
+	font-weight: bold;
+	text-decoration: smallcaps;
+	
+}
+
+.feed_head_header_action {
+
+	text-align: center;
+	width: 100px;
+	font-weight: bold;
+	text-decoration: smallcaps;
+	
+}
+
+.main_container{
+	margin: 0 auto 0;
+	font-family: 'avenir_bookregular';
+	position: relative;
+	width: 1300px;
+}
+.feeds_container{
+	width: 1300px;
+}
+.feeds{
+	border: 1px #CDCDCD solid;
+}
+.feeds ul{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.feeds li {
+    padding: 10px 5px;
+    font-size: 17px;
+    color: #333333;
+    position: relative;
+    background: #fbfbfb url(images/right_sprtline.gif) repeat-x left bottom;
+	width: 1300px;
+}
+.feeds li.odd {
+    background: #f7f7f7 url(images/right_sprtline.gif) repeat-x left bottom;
+}
+.feeds li .feedtext {
+    width: 1300px;
+    display:block;
+}
+.feeds li .iconAdd {
+    position: absolute;
+    right: 24px;
+    top: 25px;
+}
+.feeds li a {
+    color: #3cadcd;
+}
+.feeds .loading {
+    position: absolute;
+    left: 1px;
+    bottom: 1px;
+    padding: 5px 0;
+    background: #fafafa;
+    text-align: center;
+    width: 1300px;
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+}
+ div.loading {
+	display: none;
+}
+.form{
+	float: left;
+}

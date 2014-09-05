@@ -1,0 +1,70 @@
+#page-heading 
+		{ 
+		
+		padding-top: 60px;
+		font-weight: bold; 
+		font-size: 12px; 
+		margin: 0 auto 0;
+		text-align: center;
+		
+		}
+		
+#product-image-td {
+
+		width: 400px;
+		margin: 0 auto 0;
+		
+		}
+
+.nav 	{ 
+
+		display: none;
+		
+		}
+
+#top-search 
+		{ 
+		
+		display: none;
+		
+		}
+
+#nav-right
+		{
+
+		display: none;
+		
+		}
+		
+#nav-left
+		{
+
+		display: none;
+		
+		}
+		
+#related-activities
+		{
+		
+		display: none;
+		
+		}
+		
+#logo
+		{
+		
+		float: right;
+		margin-top: -10px;
+		
+		}
+		
+#id-form
+
+		{
+		
+		margin: 0 auto 0;
+		
+		}
+		
+
+		

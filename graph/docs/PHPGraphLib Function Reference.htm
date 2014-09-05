@@ -1,0 +1,998 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0071)http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./PHPGraphLib Function Reference_files/widget097.css" media="all">
+
+    
+<link rel="canonical" href="./PHPGraphLib Function Reference_files/PHPGraphLib Function Reference.htm">
+<meta name="description" content="PHP, MYSQL, and web development scripts, tools and resources.">
+<meta property="og:title" content="PHPGraphLib Function Reference">
+<meta property="og:description" content="
+
+
+Constructor
+Required Functions
+Axis &amp; Data Functions
+Title Functions
+Bar Functions
+Grid Functions
+Graph Line Functions
+
+
+
+
+Data Point Functions
+Data Value Functions
+Goal Line Functions
+Legend F">
+<meta property="og:image" content="http://www.ebrueggeman.com/sites/www.ebrueggeman.com/files/images/phpgraphlib_example_graph.img_assist_properties.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference">
+<meta property="og:site_name" content="The Website of Elliott Brueggeman">
+<link rel="shortcut icon" href="http://www.ebrueggeman.com/misc/favicon.ico" type="image/x-icon">
+    <title>PHPGraphLib Function Reference</title>
+    <link type="text/css" rel="stylesheet" media="all" href="./PHPGraphLib Function Reference_files/css_8baba62835eb058a43cc4f9d91886b6d.css">
+<link type="text/css" rel="stylesheet" media="print" href="./PHPGraphLib Function Reference_files/css_c349c1c23ed50124e671f399c34a2546.css">
+    <script type="text/javascript" async="" src="./PHPGraphLib Function Reference_files/ga.js"></script><script type="text/javascript" src="./PHPGraphLib Function Reference_files/js_224196e7e4258971ece55267b4ff23ec.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","googleanalytics":{"trackOutgoing":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"syntaxhighlighter":[]});
+//--><!]]>
+</script>
+    <!--[if lt IE 7]>
+      <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/ebrueggeman/fix-ie.css />    <![endif]-->
+	
+	<script type="text/javascript">
+	jQuery(document).ready(function(){
+	  jQuery('#block-menu-primary-links li').hover(
+		function(){
+		  jQuery('ul:first', $(this)).addClass('menushown').show();
+		},
+		function(){
+		  jQuery('ul', $(this)).hide().removeClass('menushown');
+		}
+	  );
+	});
+	
+	
+	</script>
+	
+	
+  <div style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;" id="_atssh"><iframe id="_atssh584" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="./PHPGraphLib Function Reference_files/sh103.htm"></iframe></div><script type="text/javascript" src="./PHPGraphLib Function Reference_files/core046.js"></script></head>
+  <body class="sidebar-right">
+<script type="text/javascript" src="./PHPGraphLib Function Reference_files/addthis_widget.js"></script>
+
+  <div id="upper-header-region" class="clear-block"></div>
+
+    <div id="wrapper">
+    <div id="container" class="clear-block">
+
+     <div id="header">
+        <div id="logo-floater">
+        <h1><a href="http://www.ebrueggeman.com/"><span>Elliott Brueggeman - PHP and Web Development Information</span></a></h1>        </div>
+		
+		<div class="green_row">&nbsp;</div>
+		<div id="header-region" class="clear-block"><div id="block-menu-primary-links" class="clear-block block block-menu">
+
+
+  <div class="content"><ul class="menu"><li class="expanded first active-trail menu13"><a href="http://www.ebrueggeman.com/phpgraphlib" title="" class="phpgraphlib graphing library">PHPGraphLib Graphing Library</a><ul class="menu"><li class="leaf first menu1"><a href="http://www.ebrueggeman.com/phpgraphlib" title="" class="overview">Overview</a></li>
+<li class="expanded active-trail menu8"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation" title="" class="documentation">Documentation</a><ul class="menu"><li class="leaf first menu2"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage" title="Personal and Commercial Usage Policy" class="usage policy">Usage Policy</a></li>
+<li class="leaf menu3"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-setup-and-simple-example" title="PHPGraphLib Tutorial #1: Setup &amp; Simple Example" class="tutorial #1">Tutorial #1</a></li>
+<li class="leaf menu4"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-mysql-and-phpgraphlib" title="PHPGraphLib  Tutorial #2: MYSQL and PHPGraphLib" class="tutorial #2">Tutorial #2</a></li>
+<li class="leaf menu5"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-phpgraphlibpie-extension" title="PHPGraphLib Tutorial #3: PHPGraphLibPie Extension" class="tutorial #3">Tutorial #3</a></li>
+<li class="leaf menu6"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-passing-get-parameters-to-a-graph" title="PHPGraphLib Tutorial #4: Passing Parameters to a Graph Script" class="tutorial #4">Tutorial #4</a></li>
+<li class="leaf last active-trail menu7"><a href="./PHPGraphLib Function Reference_files/PHPGraphLib Function Reference.htm" title="PHPGraphLib Function Reference" class="function reference active">Function Reference</a></li>
+</ul></li>
+<li class="leaf menu9"><a href="http://www.ebrueggeman.com/phpgraphlib/download" title="" class="download">Download</a></li>
+<li class="leaf menu10"><a href="http://www.ebrueggeman.com/phpgraphlib/remote-api" title="PHPGraphlib Remote API" class="remote api">Remote API</a></li>
+<li class="leaf menu11"><a href="http://www.ebrueggeman.com/phpgraphlib/examples" title="PHPGraphLib Examples" class="examples">Examples</a></li>
+<li class="leaf last menu12"><a href="http://www.ebrueggeman.com/phpgraphlib/attribution-logos" title="PHPGraphLib Attribution Logos" class="logos">Logos</a></li>
+</ul></li>
+<li class="expanded menu17"><a href="http://www.ebrueggeman.com/skinnytip" title="SKinnyTip Tooltip LIbrary" class="skinnytip tooltip library">SkinnyTip Tooltip Library</a><ul class="menu" style="display: none;"><li class="leaf first menu14"><a href="http://www.ebrueggeman.com/skinnytip" title="" class="overview">Overview</a></li>
+<li class="leaf menu15"><a href="http://www.ebrueggeman.com/skinnytip/documentation" title="SkinnyTip Documentation" class="documentation">Documentation</a></li>
+<li class="leaf last menu16"><a href="http://www.ebrueggeman.com/skinnytip/download" title="SkinnyTip Downloads" class="download">Download</a></li>
+</ul></li>
+<li class="expanded menu21"><a href="http://www.ebrueggeman.com/phpweatherlib" title="PHPWeatherLib PHP Weather Conditions Library" class="phpweatherlib">PHPWeatherLib</a><ul class="menu" style="display: none;"><li class="leaf first menu18"><a href="http://www.ebrueggeman.com/phpweatherlib" title="" class="overview">Overview</a></li>
+<li class="leaf menu19"><a href="http://www.ebrueggeman.com/phpweatherlib/documentation" title="PHPWeatherLib Documentation" class="documentation">Documentation</a></li>
+<li class="leaf last menu20"><a href="http://www.ebrueggeman.com/phpweatherlib/download" title="PHPWeatherLib Downloads" class="download">Download</a></li>
+</ul></li>
+<li class="expanded menu24"><a href="http://www.ebrueggeman.com/blog" title="" class="web development blog">Web Development Blog</a><ul class="menu" style="display: none;"><li class="leaf first menu22"><a href="http://www.ebrueggeman.com/blog" title="" class="all blog posts">All Blog Posts</a></li>
+<li class="leaf last menu23"><a href="http://www.ebrueggeman.com/blog/php_performance_benchmarking" title="" class="php performance">PHP Performance</a></li>
+</ul></li>
+<li class="leaf last menu25"><a href="http://www.ebrueggeman.com/contact" title="Contact" class="contact">Contact</a></li>
+</ul></div>
+</div>
+</div>
+
+      </div> <!-- /header -->
+
+      
+      <div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
+          <div class="breadcrumb"><a href="http://www.ebrueggeman.com/">Home</a> › <a href="http://www.ebrueggeman.com/phpgraphlib" title="">PHPGraphLib Graphing Library</a> › <a href="http://www.ebrueggeman.com/phpgraphlib/documentation" title="">Documentation</a></div>                              <h2 class="page-title">PHPGraphLib Function Reference</h2>                              		  
+		  
+                    		  
+		  <div class="clear-block">
+            <div id="node-70" class="node">
+
+
+
+  
+  <div class="content clear-block">
+    <!-- google_ad_section_start --><div class="function-nav">
+<div class="left">
+<ul>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#constructor">Constructor</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#required_functions">Required Functions</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#axis_functions">Axis &amp; Data Functions</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#title_functions">Title Functions</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#bar_functions">Bar Functions</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#grid_functions">Grid Functions</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#graph_line_functions">Graph Line Functions</a></li>
+</ul>
+</div>
+<div class="right">
+<ul>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#data_point_functions">Data Point Functions</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#data_value_functions">Data Value Functions</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#goal_line_functions">Goal Line Functions</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#legend_functions">Legend Functions</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#background_functions">Background Functions</a></li>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference#supported_colors">Supported Colors</a></li>
+</ul>
+</div>
+</div>
+<p>Below is the default form of the constructor:</p>
+<div class="function-category">
+<h3>Constructor<a id="constructor" name="constructor"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>PHPGraphLib</strong> ( int $width, int $height, [string $filename] )</div>
+<div class="required">required</div>
+<div class="left">
+<ul>
+<li>$graph = new PHPGraphLib(600,400);</li>
+<li>$graph = new PHPGraphLib(600,400, "image.png");</li>
+</ul>
+</div>
+<div class="description">
+<p>PHPGraphLib object constructor. $width and $height arguments are optional. Default width=400, height=300. Recommended width is at least 200 and recommended height is at least 225.</p>
+<p>If you specify the optional filename argument, PHPGraphLib will not display to the screen, but instead create a .png file in the same directory as the script where PHPGraphLib is being called.</p>
+</div>
+</div>
+<p>The two other main, required functions are below:</p>
+<div class="function-category">
+<h3>Required Functions<a id="required_functions" name="required_functions"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>addData</strong>( $data )</div>
+<div class="required">required</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;addData(array(100,12,43,342,9));</li>
+</ul>
+</div>
+<div class="description">
+<p>Adds data to the graph. The array values will be the y-axis value. If the array has keys, the keys will be the corresponding x-axis values.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>createGraph</strong> ( )</div>
+<div class="required">required</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;createGraph();</li>
+</ul>
+</div>
+<div class="description">
+<p>Creates and outputs the graph. <strong>Must</strong> be called last.</p>
+</div>
+</div>
+<p>All other graph customization functions are below:</p>
+<div class="function-category">
+<h3><a id="axis_functions" name="axis_functions"></a>Axis &amp; Data Functions</h3>
+</div>
+<div class="function">
+<div class="name"><strong>setupXAxis</strong> ( int $percent, string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setupXAxis(15);</li>
+<li>$graph-&gt;setupXAxis(10, "blue");</li>
+<li>$graph-&gt;setupXAxis(20, "128,128,0");</li>
+<li>$graph-&gt;setupXAxis("", "purple");</li>
+<li>$graph-&gt;setupXAxis(false);</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the x-axis margin as a percentage of the height and the color or the x-axis.</p>
+<p>By default, the x-axis margin is 8% of the width and black. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. You may also call the setupXAxis() function with only a false argument to hide the x-axis. You can also call it with just the first argument, or leave the percent argument as an empty string and call it with the color argument.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setupYAxis</strong> ( int $percent, string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setupYAxis(15);</li>
+<li>$graph-&gt;setupYAxis(10, "blue");</li>
+<li>$graph-&gt;setupYAxis(20, "128,128,0");</li>
+<li>$graph-&gt;setupYAxis("", "purple");</li>
+<li>$graph-&gt;setupYAxis(false);</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the y-axis margin as a percentage of the height and the color or the y-axis.</p>
+<p>By default, the y-axis margin is 8% of the width and black. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. You may also call the setupYAxis() function with only a false argument to hide the y-axis. You can also call it with just the first argument, or leave the percent argument as an empty string and call it with the color argument.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setRange</strong> ( int $max, int $min )</div>
+<div class="new">new in 1.14</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setRange(130,80);</li>
+<li>$graph-&gt;setRange(100000,2000);</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the range of values to be displayed on the y-axis. This overrides the default automatic y-axis range and values that get shown on the graph. Examples of setRange() are shown below:</p>
+<table style="margin: 5px 0pt 5px 25px;">
+<tbody>
+<tr>
+<td style="text-align: center;"><img src="./PHPGraphLib Function Reference_files/graph_bar_no_range.png" alt="Graph without setRange()" width="210" height="150"></td>
+<td><img src="./PHPGraphLib Function Reference_files/graph_bar_with_range.png" alt="Graph with setRange() function" width="210" height="150"></td>
+</tr>
+<tr>
+<td>
+<p class="centered" style="font-style: italic;">Default Range Handling</p>
+</td>
+<td>
+<p class="centered" style="font-style: italic;">With setRange(130,80) function.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Note that setRange() has some limitations - The $max/$min variables are approximate. Sometimes PHPGraphLib may slightly alter these values when faced with non-rounded values.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setXValues</strong> ( boolean $x_values )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setXValues(false);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display values on the x-axis. Accepts either true or false arguments. Default value is true, the x-axis values are displayed.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setYValues</strong> ( boolean $y_values )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setYValues(false);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display values on the y-axis. Accepts either true or false arguments. Default value is true, the y-axis values are displayed.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setXValuesHorizontal</strong> ( boolean $horizontal )</div>
+<div class="new">new in 1.17</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setXValuesHorizontal(true);</li>
+<li>$graph-&gt;setXValuesHorizontal(false);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display values on the x-axis orientated horizontally. Accepts either true or false arguments. Default value is false, the y-axis values are vertically oriented.</p>
+<table style="margin: 5px 0pt 5px 25px;">
+<tbody>
+<tr>
+<td><img src="./PHPGraphLib Function Reference_files/example_text_horiz.png" alt="Horizontal X-Axis Values" width="300" height="103" vspace="3"></td>
+</tr>
+<tr>
+<td>
+<p class="centered" style="font-style: italic;">Horizontal X-Axis Values</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setXValuesVertical</strong> ( boolean $vertical )</div>
+<div class="new">new in 1.17</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setXValuesVertical(true);</li>
+<li>$graph-&gt;setXValuesVertical(false);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display values on the x-axis orientated vertically. Accepts either true or false arguments. Default value is true, the y-axis values are vertically oriented.</p>
+<table style="margin: 5px 0pt 5px 25px;">
+<tbody>
+<tr>
+<td><img src="./PHPGraphLib Function Reference_files/example_text_vert.png" alt="Vertical X-Axis Values" width="294" height="104" vspace="3"></td>
+</tr>
+<tr>
+<td>
+<p class="centered" style="font-style: italic;">Vertical X-Axis Values</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setTextColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setTextColor("maroon");</li>
+<li>$graph-&gt;setTextColor("#006600");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the text color used to display values on the both axis. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default text color is a dark gray.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setXAxisTextColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setXAxisTextColor("128,0,0");</li>
+<li>$graph-&gt;setXAxisTextColor("#333333");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the text color used to display values on just the x-axis. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default color is a dark gray.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setYAxisTextColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setYAxisTextColor("silver");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the text color used to display values on just the y-Axis. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default color is a dark gray.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="function-category">
+<h3>Title Functions<a id="title_functions" name="title_functions"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>setTitle</strong> ( string $title )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setTitle("Performance July 2007");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets and displays a title for the graph.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setTitleColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setTitleColor("maroon");</li>
+<li>$graph-&gt;setTitleColor("0,255,0");</li>
+<li>$graph-&gt;setTitleColor("#660000");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the title color. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default title color is black.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setTitleLocation</strong> ( string $location )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setTitleColor("left");</li>
+<li>$graph-&gt;setTitleColor("right");</li>
+<li>$graph-&gt;setTitleColor("center");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the location of the title across the top of the graph. Valid values are "left", "right", "center". Default title location is the center.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="function-category">
+<h3>Bar Functions<a id="bar_functions" name="bar_functions"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>setBars</strong> ( boolean $bars )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setBars(false);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display bars on the graph - i.e. displays a bar graph. Accepts either true or false arguments. Default value is true, the bars are displayed.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setBarColor</strong> ( string $color, [string $color2], [string $color3] )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setBarColor("white");</li>
+<li>$graph-&gt;setBarColor("123,65,12");</li>
+<li>$graph-&gt;setBarColor("#660000");</li>
+<li>//Multiple Datasets</li>
+<li>$graph-&gt;setBarColor("123,65,12", "100,100,100");</li>
+<li>$graph-&gt;setBarColor("#333333", "#888888");</li>
+<li>$graph-&gt;setBarColor("white", "gray", "green");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the color of the bars on the graph. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default bar color is gray. PHPGraphLib will ignore this function if the setGradient() function is set.</p>
+<p>If using multiple datasets, you may specify up to two additional colors. If you are using multiple datasets, but have not specifed more than one color, additional colors will be specified automatically.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setBarOutline</strong> ( boolean $outline )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setBarOutline(false);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display an outline around each bar on the graph. Accepts either true or false arguments. Default value is true, the outline is displayed.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setBarOutlineColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setBarOutlineColor("navy");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the color of the outline of each bar on the graph. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default bar outline color is black.</p>
+</div>
+</div>
+<div class="function">
+<div class="name extra-large"><strong>setGradient</strong> ( string $color1, string $color2, [string $color3], [string $color4], [string $color5], [string $color6] )</div>
+<div class="left large">
+<ul>
+<li>$graph-&gt;setGradient("red", "maroon");</li>
+<li>$graph-&gt;setGradient("200,200,200", "100,100,100");</li>
+<li>$graph-&gt;setGradient("#990000", "#CC0000");</li>
+<li>//Multiple Datasets</li>
+<li>$graph-&gt;setGradient("red", "maroon", "yellow", "olive" );</li>
+<li>$graph-&gt;setGradient("3,33,33", "8,100,3", "teal", "aqua", "red", "blue");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the colors for and enables the bars of the graph to be displayed as a gradient between two colors. Color arguments may be specified as one of the supported colors or as an RGB value comma separated string. By default, the gradient feature is not enabled.</p>
+<p>If using multiple datasets, up to two more pairs of gradient colors may be specified. If you are using multiple datasets, but have not specifed more than one gradient color, additional gradient colors will be specified automatically.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="function-category">
+<h3>Grid Functions<a id="grid_functions" name="grid_functions"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>setGrid</strong> ( boolean $grid )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setGrid(false);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display the grid. Accepts either true or false arguments. Default value is true, the grid is displayed.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setGridColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setGridColor("black");</li>
+<li>$graph-&gt;setGridColor("0,127,0");</li>
+<li>$graph-&gt;setGridColor("#0000AA");</li>
+</ul>
+</div>
+<div class="description">
+<p>Display the grid. Accepts either true or false arguments. Default value is true, the grid is displayed.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="function-category">
+<h3>Line Functions<a id="graph_line_functions" name="graph_line_functions"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>setLine</strong> ( boolean $line )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setLine(true);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display the graph line. Accepts either true or false arguments. Default value is false, the graph line is not displayed.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setLineColor</strong> ( string $color, [string $color2], [$string $color3] )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setLineColor("navy");</li>
+<li>$graph-&gt;setLineColor("255,255,0");</li>
+<li>$graph-&gt;setLineColor("#339900");</li>
+<li>//Multiple datasets</li>
+<li>$graph-&gt;setLineColor("navy", "red","blue");</li>
+<li>$graph-&gt;setLineColor("230,23,100", "red");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the line color of the graph lines, if enabled, on the graph. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default line color is a dark gray.</p>
+<p>If multiple datasets are used, you can specify up to two additional line colors. If graph bars are disabled, and there are multiple datasets, but only one line color is specified, additional line colors will be generated automatically.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="function-category">
+<h3>Data Point Functions<a id="data_point_functions" name="data_point_functions"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>setDataPoints</strong> ( boolean $points )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setDataPoints(true);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display a circular data point on the graph for each value. Accepts either true or false arguments. Default value is false, data points are not displayed.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setDataPointColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setBarOutlineColor("navy");</li>
+<li>$graph-&gt;setBarOutlineColor("255,255,0");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the color of the data point circle, if enabled, on the graph. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default data point color is black.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setDataPointSize</strong> ( int $size )</div>
+<div class="new">new in 1.13</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setDataPointSize(4);</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the diameter of the data point circle, if enabled on the graph. Default size is 6 pixels.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="function-category">
+<h3>Data Value Functions<a id="data_value_functions" name="data_value_functions"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>setDataValues</strong> ( boolean $values )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setDataValues(true);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display each numeric data value, as passed in the data value array, on the graph. Accepts either true or false arguments. Default value is false, data values are not displayed.</p>
+<table style="margin: 5px 0pt 5px 25px;">
+<tbody>
+<tr>
+<td><img src="./PHPGraphLib Function Reference_files/example_graph_data_values.png" alt="Graph with data values" width="300" height="165"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setDataValueColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setBarOutlineColor("navy");</li>
+<li>$graph-&gt;setBarOutlineColor("255,255,0");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the color of the data value display, if enabled, on the graph. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default data value color is a dark gray.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setDataFormat</strong> ( string $format )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setDataFormat("percent");</li>
+<li>$graph-&gt;setDataFormat("degrees");</li>
+<li>$graph-&gt;setDataFormat("comma");</li>
+<li>$graph-&gt;setDataFormat("XXX");</li>
+</ul>
+</div>
+<div class="description">
+<p>Formats data points on both the y axis and the actual graph (if setDataPoints(true); is set). Current supported formats include "percent" which appends a % to the end of each value, "degrees" which appends a ° to the end of each value, and "comma" which groups values with commas (3,232,109). You can call as many setDataFormat() functions as you want.</p>
+<p>If the format argument is not in the above list of supported formats, the value specified will be appended to the end of the data value displayed. For example if you have a data value of 23 and you call $graph-&gt;setDataFormat(" Apples"), the data value will be displayed as: 23 Apples.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setDataCurrency</strong> ( string $currency )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setDataCurrency("dollar");</li>
+<li>$graph-&gt;setDataCurrency("yen");</li>
+<li>$graph-&gt;setDataCurrency("pound");</li>
+<li>$graph-&gt;setDataCurrency("lira");</li>
+<li>$graph-&gt;setDataCurrency("XXX");</li>
+</ul>
+</div>
+<div class="description">
+<p>Formats data points on both the y axis and the actual graph (if setDataPoints(true); is set) by adding currency symbols in front of the data value displayed. Currently the following formats are supported:</p>
+<table class="data_table">
+<tbody>
+<tr>
+<td>dollar</td>
+<td>$</td>
+</tr>
+<tr>
+<td>pound</td>
+<td>£</td>
+</tr>
+<tr>
+<td>yen</td>
+<td>¥</td>
+</tr>
+<tr>
+<td>lira</td>
+<td>£</td>
+</tr>
+</tbody>
+</table>
+<p>If the currency argument is not in the above list, it will be appended to the front of the data value. For example if you have a data value of 2300 and you call $graph-&gt;setDataCurrency("*^* "), the data value will be displayed as: *^* 2300.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="function-category">
+<h3>Goal Line Functions<a id="goal_line_functions" name="goal_line_functions"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>setGoalLine</strong> ( string $goalValue, [string $color], [string $style] )</div>
+<div class="new">modified in 2.31</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setGoalLine(90);</li>
+<li>$graph-&gt;setGoalLine(14, "red", "solid");</li>
+<li>$graph-&gt;setGoalLine(.023, "#FF0000", "dashed");</li>
+</ul>
+</div>
+<div class="description">
+<p>Displays a singular horizontal line to display a goal or y value needing emphasis. $color and $style arguments are optional. The default color is black if not specified and the default style is solid. Current possible values of the $style argument are "solid" and "dashed". Goal value must be within bounds of the maximum and minimum y-axis values. The setGoalLine() function can be called multiple times to add multiple goal lines, if needed.</p>
+<table style="margin: 5px 0pt 5px 25px;">
+<tbody>
+<tr>
+<td><img src="./PHPGraphLib Function Reference_files/example_graph_goal_line.png" alt="Graph with goal line" width="300" height="165"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setGoalLineColor</strong> ( string $color )</div>
+<div class="required">deprecated</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setGoalLineColor("red");</li>
+<li>$graph-&gt;setGoalLineColor("255,0,0");</li>
+</ul>
+</div>
+<div class="description">
+<p>This function is deprecated in favor of specifying a color in the setGoalLine() function. Please use setGoalLine() in new implementations.</p>
+<p>Sets the color of the goal line, if present. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default goal line color is black.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="function-category">
+<h3>Legend Functions<a id="legend_functions" name="legend_functions"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>setLegend</strong> ( boolean $legend )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setLegend(true);</li>
+<li>$graph-&gt;setLegend(false);</li>
+</ul>
+</div>
+<div class="description">
+<p>Display a legend with color swatches matching the corresponding colors on the graph. Accepts either true or false arguments. Default value is false, the legend is not displayed.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setLegendTitle</strong> ( string $title, [string $title2], [string $title3] )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setLegendTitle("Apples");</li>
+<li>//Multiple Datasets</li>
+<li>$graph-&gt;setLegendTitle("Apples", "Pears");</li>
+<li>$graph-&gt;setLegendTitle("Apples", "Pears", "Oranges" )</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the title of the dataset on the legend. If using more than one dataset, specify titles in the order of datasets specified in the addData() function.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setLegendColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setLegendColor("red");</li>
+<li>$graph-&gt;setLegendColor("120,60,30");</li>
+<li>$graph-&gt;setLegendColor("#660000");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the background color of the legend, if present. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default legend background color is white.</p>
+<table style="margin: 5px 0pt 5px 25px;">
+<tbody>
+<tr>
+<td><img src="./PHPGraphLib Function Reference_files/graph_legend_example.png" alt="Legend Examples" width="330" height="184"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setLegendTextColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setLegendTextColor("olive");</li>
+<li>$graph-&gt;setLegendTextColor("101,45,12");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets text color in the legend. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default color is dark gray.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setLegendOutlineColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setLegendOutlineColor("yellow");</li>
+<li>$graph-&gt;setLegendOutlineColor("255,255,0");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets border color of the legend. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default color is light gray.</p>
+</div>
+</div>
+<div class="function">
+<div class="name"><strong>setSwatchOutlineColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setSwatchOutlineColor("teal");</li>
+<li>$graph-&gt;setSwatchOutlineColor("0,122,255");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the border color of the color swatches in the legend. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. Default color is a dark gray.</p>
+</div>
+</div>
+<p>&nbsp;</p>
+<div class="function-category">
+<h3>Background Functions<a id="background_functions" name="background_functions"></a></h3>
+</div>
+<div class="function">
+<div class="name"><strong>setBackgroundColor</strong> ( string $color )</div>
+<div class="left">
+<ul>
+<li>$graph-&gt;setBackgroundColor("black");</li>
+<li>$graph-&gt;setBackgroundColor("0,0,255");</li>
+</ul>
+</div>
+<div class="description">
+<p>Sets the background color for the graph. Color may be specified as one of the supported colors, an RGB value comma separated string, or a hex value. There is no need to enable the background by calling a boolean function - setting a color for it enables the background. Default background color is white.</p>
+</div>
+</div>
+<div class="function-category">
+<h3>Supported Colors<a id="supported_colors" name="supported_colors"></a></h3>
+</div>
+<p>The following is a list of colors supported in name by PHPGraphLib. The colors are from the W3C's list of 16 W3C Standard Colors.</p>
+<table class="data_table" style="margin: 0pt;">
+<tbody>
+<tr>
+<td>Color Name</td>
+<td>Swatch</td>
+<td>RGB Value</td>
+<td>Color Name</td>
+<td>Swatch</td>
+<td>RGB Value</td>
+</tr>
+<tr class="table_top">
+<td>black</td>
+<td><img src="./PHPGraphLib Function Reference_files/black.gif" alt="black" width="24" height="24"></td>
+<td>0,0,0</td>
+<td>green</td>
+<td><img src="./PHPGraphLib Function Reference_files/green.gif" alt="green" width="24" height="24"></td>
+<td>0,128,0</td>
+</tr>
+<tr class="table_top">
+<td>silver</td>
+<td><img src="./PHPGraphLib Function Reference_files/silver.gif" alt="silver" width="24" height="24"></td>
+<td>192,192,192</td>
+<td>lime</td>
+<td><img src="./PHPGraphLib Function Reference_files/lime.gif" alt="lime" width="24" height="24"></td>
+<td>0,255,0</td>
+</tr>
+<tr class="table_top">
+<td>gray</td>
+<td><img src="./PHPGraphLib Function Reference_files/gray.gif" alt="gray" width="24" height="24"></td>
+<td>128,128,128</td>
+<td>olive</td>
+<td><img src="./PHPGraphLib Function Reference_files/olive.gif" alt="olive" width="24" height="24"></td>
+<td>128,128,0</td>
+</tr>
+<tr class="table_top">
+<td>white</td>
+<td><img src="./PHPGraphLib Function Reference_files/white.gif" alt="white" width="24" height="24"></td>
+<td>255,255,255</td>
+<td>yellow</td>
+<td><img src="./PHPGraphLib Function Reference_files/yellow.gif" alt="yellow" width="24" height="24"></td>
+<td>255,255,0</td>
+</tr>
+<tr class="table_top">
+<td>maroon</td>
+<td><img src="./PHPGraphLib Function Reference_files/maroon.gif" alt="maroon" width="24" height="24"></td>
+<td>128,0,0</td>
+<td>navy</td>
+<td><img src="./PHPGraphLib Function Reference_files/navy.gif" alt="navy" width="24" height="24"></td>
+<td>0,0,128</td>
+</tr>
+<tr class="table_top">
+<td>red</td>
+<td><img src="./PHPGraphLib Function Reference_files/red.gif" alt="red" width="24" height="24"></td>
+<td>255,0,0</td>
+<td>blue</td>
+<td><img src="./PHPGraphLib Function Reference_files/blue.gif" alt="blue" width="24" height="24"></td>
+<td>0,0,255</td>
+</tr>
+<tr class="table_top">
+<td>purple</td>
+<td><img src="./PHPGraphLib Function Reference_files/purple.gif" alt="purple" width="24" height="24"></td>
+<td>128,0,128</td>
+<td>teal</td>
+<td><img src="./PHPGraphLib Function Reference_files/teal.gif" alt="teal" width="24" height="24"></td>
+<td>0,128,128</td>
+</tr>
+<tr class="table_top">
+<td>fuscia</td>
+<td><img src="./PHPGraphLib Function Reference_files/fuchsia.gif" alt="fuscia" width="24" height="24"></td>
+<td>255,0,255</td>
+<td>aqua</td>
+<td><img src="./PHPGraphLib Function Reference_files/aqua.gif" alt="aqua" width="24" height="24"></td>
+<td>0,255,255</td>
+</tr>
+</tbody>
+</table>
+<!-- google_ad_section_end -->  </div>
+
+  <div class="clear-block">
+    <div class="meta">
+        </div>
+
+      </div>
+
+</div>
+          </div>
+                    <div id="footer"></div>
+      </div></div></div></div> <!-- /.left-corner, /.right-corner, /#squeeze, /#center -->
+
+              <div id="sidebar-right" class="sidebar">
+                    <div id="block-block-1" class="clear-block block block-block">
+
+  <h2>Why use PHPGraphLib</h2>
+
+  <div class="content"><ul id="project_points">
+<li>Slick!</li>
+<li>Easy to use</li>
+<li>Lightweight</li>
+<li>Object oriented design</li>
+<li>Bar, line, stacked bar, and pie charts</li>
+<li>Supports large numbers, decimals, negative numbers, and multiple datasets</li>
+<li>Free for personal use</li>
+<li>Very small fee for <a href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage">commercial use</a></li>
+</ul>
+</div>
+</div>
+<div id="block-block-2" class="clear-block block block-block">
+
+  <h2>Download the Latest</h2>
+
+  <div class="content"><p>New version released on 10/18/2011. Before you download, you must agree to the <a href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage">usage policy</a>.</p>
+<ul>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/download/2.31">PHPGraphLib 2.31 (.zip)</a></li>
+</ul>
+</div>
+</div>
+<div id="block-block-3" class="clear-block block block-block">
+
+  <h2>Documentation</h2>
+
+  <div class="content"><div class="view-header">
+<strong style="margin-bottom: 10px;">Usage</strong>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage">Personal and Commercial Usage Policy</a></span></div>
+</div>
+</div>
+<div class="attachment attachment-after">
+<div class="view view-phpgraphlib-documentation view-id-phpgraphlib_documentation view-display-id-attachment_1 view-dom-id-1">
+<div class="view-header" style="margin-top: 20px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px;">
+<strong style="margin-top: 15px; margin-bottom: 10px;">Tutorials</strong>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-setup-and-simple-example">Tutorial #1: Setup &amp; Simple Example</a></span></div>
+</div>
+<div class="views-row views-row-2 views-row-even" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-mysql-and-phpgraphlib">Tutorial #2: MYSQL and PHPGraphLib</a></span></div>
+</div>
+<div class="views-row views-row-3 views-row-odd" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-phpgraphlibpie-extension">Tutorial #3: PHPGraphLibPie Extension</a></span></div>
+</div>
+<div class="views-row views-row-4 views-row-even" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-passing-get-parameters-to-a-graph">Tutorial #4: Passing Parameters to a Graph Script</a></span></div>
+</div>
+<div class="views-row views-row-5 views-row-odd views-row-last" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/examples">Examples</a></span></div>
+</div>
+</div>
+</div>
+<div class="view view-phpgraphlib-documentation view-id-phpgraphlib_documentation view-display-id-attachment_2 view-dom-id-2">
+<div class="view-header" style="margin-top: 20px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px;">
+<strong style="margin-top: 15px; margin-bottom: 10px; ">Function Reference</strong>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="./PHPGraphLib Function Reference_files/PHPGraphLib Function Reference.htm">Function Reference - PHPGraphLib</a></span></div>
+</div>
+<div class="views-row views-row-2 views-row-even" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference-phpgraphlibpie">Function Reference - PHPGraphLibPie </a></span></div>
+</div>
+<div class="views-row views-row-3 views-row-odd views-row-last" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference-phpgraphlibstacked">Function Reference - PHPGraphLibStacked </a></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+      
+	          <div id="bottom-footer">
+          <div id="block-block-12" class="clear-block block block-block">
+
+
+  <div class="content"><div class="left"><a href="http://www.ebrueggeman.com/">Home</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/phpgraphlib">PHPGraphLib</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/skinnytip">SkinnyTip</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/phpweatherlib">PHPWeatherLib</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/blog">Web Development Blog</a></div>
+<div class="right">Site content copyright Elliott Brueggeman, 2011.</div></div>
+</div>
+        </div>
+      	  
+    </div> <!-- /container -->
+  </div>
+<!-- /layout -->
+
+  <div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div><script type="text/javascript" src="./PHPGraphLib Function Reference_files/js_a8fe19c945b7d8b25442c848d4bf28ec.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-175053-3"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = "/sites/www.ebrueggeman.com/files/googleanalytics/ga.js?Q";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+  <!-- PAGE GENERATED AT 12-11-06 11:23:14pm -->
+  
+
+</body></html>

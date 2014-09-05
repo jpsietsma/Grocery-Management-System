@@ -1,0 +1,54 @@
+body {
+margin: 0px;
+color: orange;
+background-color: black;
+min-height: 480px;
+font-family: Arial;
+}
+form ul {
+margin: 0px;
+padding: 6px;
+list-style-type: none;
+}
+form ul li {
+margin: 0 0 4px 0;
+-webkit-border-radius: 4px;
+border: 1px solid #666666;
+padding: 4px;
+}
+form ul li.naked {
+-webkit-border-radius: 0px;
+border: 0;
+padding: 0;
+}
+input, textarea {
+-webkit-appearance: none;
+border: 0;
+width: 99%;
+}
+input[type=submit] {
+border: 1px solid white;
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0.0,
+#F8F8F8), color-stop(1.0, #AAAAAA));
+-webkit-border-radius: 6px;
+-webkit-box-shadow: 0 0 4px #333333;
+width: 100%;
+padding: 6px;
+}
+
+h1 {
+margin: 0 auto 0;
+font-weight: bold;
+text-align: center;
+font-size: 20px;
+
+}
+
+h2 {
+margin: 0 auto 0;
+color: gray;
+font-weight: bold;
+text-align: center;
+font-size: 15px;
+
+}

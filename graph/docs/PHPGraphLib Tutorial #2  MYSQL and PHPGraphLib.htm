@@ -1,0 +1,248 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0083)http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-mysql-and-phpgraphlib -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/widget097.css" media="all">
+
+    
+<link rel="canonical" href="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib.htm">
+<meta name="description" content="PHP, MYSQL, and web development scripts, tools and resources.">
+<meta property="og:title" content="PHPGraphLib Tutorial #2: MYSQL and PHPGraphLib ">
+<meta property="og:description" content="Overview
+In this example, we are going to show a simple example of how to use PHPGraphLib with MYSQL.
+
+Include the source file in a new script and create the PHPGraphLib Object
+Include the source PHPG">
+<meta property="og:image" content="http://www.ebrueggeman.com/sites/www.ebrueggeman.com/files/images/phpgraphlib_example_graph.img_assist_properties.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-mysql-and-phpgraphlib">
+<meta property="og:site_name" content="The Website of Elliott Brueggeman">
+<link rel="shortcut icon" href="http://www.ebrueggeman.com/misc/favicon.ico" type="image/x-icon">
+    <title>PHPGraphLib Tutorial #2: MYSQL and PHPGraphLib</title>
+    <link type="text/css" rel="stylesheet" media="all" href="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/css_8baba62835eb058a43cc4f9d91886b6d.css">
+<link type="text/css" rel="stylesheet" media="print" href="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/css_c349c1c23ed50124e671f399c34a2546.css">
+    <script type="text/javascript" async="" src="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/ga.js"></script><script type="text/javascript" src="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/js_224196e7e4258971ece55267b4ff23ec.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","googleanalytics":{"trackOutgoing":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"syntaxhighlighter":[]});
+//--><!]]>
+</script>
+    <!--[if lt IE 7]>
+      <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/ebrueggeman/fix-ie.css />    <![endif]-->
+	
+	<script type="text/javascript">
+	jQuery(document).ready(function(){
+	  jQuery('#block-menu-primary-links li').hover(
+		function(){
+		  jQuery('ul:first', $(this)).addClass('menushown').show();
+		},
+		function(){
+		  jQuery('ul', $(this)).hide().removeClass('menushown');
+		}
+	  );
+	});
+	
+	
+	</script>
+	
+	
+  <div style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;" id="_atssh"><iframe id="_atssh688" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/sh103.htm"></iframe></div><script type="text/javascript" src="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/core046.js"></script></head>
+  <body class="sidebar-right">
+<script type="text/javascript" src="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/addthis_widget.js"></script>
+
+  <div id="upper-header-region" class="clear-block"></div>
+
+    <div id="wrapper">
+    <div id="container" class="clear-block">
+
+     <div id="header">
+        <div id="logo-floater">
+        <h1><a href="http://www.ebrueggeman.com/"><span>Elliott Brueggeman - PHP and Web Development Information</span></a></h1>        </div>
+		
+		<div class="green_row">&nbsp;</div>
+		<div id="header-region" class="clear-block"><div id="block-menu-primary-links" class="clear-block block block-menu">
+
+
+  <div class="content"><ul class="menu"><li class="expanded first active-trail menu13"><a href="http://www.ebrueggeman.com/phpgraphlib" title="" class="phpgraphlib graphing library">PHPGraphLib Graphing Library</a><ul class="menu" style="display: none;"><li class="leaf first menu1"><a href="http://www.ebrueggeman.com/phpgraphlib" title="" class="overview">Overview</a></li>
+<li class="expanded active-trail menu8"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation" title="" class="documentation">Documentation</a><ul class="menu" style="display: none;"><li class="leaf first menu2"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage" title="Personal and Commercial Usage Policy" class="usage policy">Usage Policy</a></li>
+<li class="leaf menu3"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-setup-and-simple-example" title="PHPGraphLib Tutorial #1: Setup &amp; Simple Example" class="tutorial #1">Tutorial #1</a></li>
+<li class="leaf active-trail menu4"><a href="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib.htm" title="PHPGraphLib  Tutorial #2: MYSQL and PHPGraphLib" class="tutorial #2 active">Tutorial #2</a></li>
+<li class="leaf menu5"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-phpgraphlibpie-extension" title="PHPGraphLib Tutorial #3: PHPGraphLibPie Extension" class="tutorial #3">Tutorial #3</a></li>
+<li class="leaf menu6"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-passing-get-parameters-to-a-graph" title="PHPGraphLib Tutorial #4: Passing Parameters to a Graph Script" class="tutorial #4">Tutorial #4</a></li>
+<li class="leaf last menu7"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference" title="PHPGraphLib Function Reference" class="function reference">Function Reference</a></li>
+</ul></li>
+<li class="leaf menu9"><a href="http://www.ebrueggeman.com/phpgraphlib/download" title="" class="download">Download</a></li>
+<li class="leaf menu10"><a href="http://www.ebrueggeman.com/phpgraphlib/remote-api" title="PHPGraphlib Remote API" class="remote api">Remote API</a></li>
+<li class="leaf menu11"><a href="http://www.ebrueggeman.com/phpgraphlib/examples" title="PHPGraphLib Examples" class="examples">Examples</a></li>
+<li class="leaf last menu12"><a href="http://www.ebrueggeman.com/phpgraphlib/attribution-logos" title="PHPGraphLib Attribution Logos" class="logos">Logos</a></li>
+</ul></li>
+<li class="expanded menu17"><a href="http://www.ebrueggeman.com/skinnytip" title="SKinnyTip Tooltip LIbrary" class="skinnytip tooltip library">SkinnyTip Tooltip Library</a><ul class="menu" style="display: none;"><li class="leaf first menu14"><a href="http://www.ebrueggeman.com/skinnytip" title="" class="overview">Overview</a></li>
+<li class="leaf menu15"><a href="http://www.ebrueggeman.com/skinnytip/documentation" title="SkinnyTip Documentation" class="documentation">Documentation</a></li>
+<li class="leaf last menu16"><a href="http://www.ebrueggeman.com/skinnytip/download" title="SkinnyTip Downloads" class="download">Download</a></li>
+</ul></li>
+<li class="expanded menu21"><a href="http://www.ebrueggeman.com/phpweatherlib" title="PHPWeatherLib PHP Weather Conditions Library" class="phpweatherlib">PHPWeatherLib</a><ul class="menu" style="display: none;"><li class="leaf first menu18"><a href="http://www.ebrueggeman.com/phpweatherlib" title="" class="overview">Overview</a></li>
+<li class="leaf menu19"><a href="http://www.ebrueggeman.com/phpweatherlib/documentation" title="PHPWeatherLib Documentation" class="documentation">Documentation</a></li>
+<li class="leaf last menu20"><a href="http://www.ebrueggeman.com/phpweatherlib/download" title="PHPWeatherLib Downloads" class="download">Download</a></li>
+</ul></li>
+<li class="expanded menu24"><a href="http://www.ebrueggeman.com/blog" title="" class="web development blog">Web Development Blog</a><ul class="menu" style="display: none;"><li class="leaf first menu22"><a href="http://www.ebrueggeman.com/blog" title="" class="all blog posts">All Blog Posts</a></li>
+<li class="leaf last menu23"><a href="http://www.ebrueggeman.com/blog/php_performance_benchmarking" title="" class="php performance">PHP Performance</a></li>
+</ul></li>
+<li class="leaf last menu25"><a href="http://www.ebrueggeman.com/contact" title="Contact" class="contact">Contact</a></li>
+</ul></div>
+</div>
+</div>
+
+      </div> <!-- /header -->
+
+      
+      <div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
+          <div class="breadcrumb"><a href="http://www.ebrueggeman.com/">Home</a> › <a href="http://www.ebrueggeman.com/phpgraphlib" title="">PHPGraphLib Graphing Library</a> › <a href="http://www.ebrueggeman.com/phpgraphlib/documentation" title="">Documentation</a></div>                              <h2 class="page-title">PHPGraphLib Tutorial #2: MYSQL and PHPGraphLib </h2>                              		  
+		  
+                    		  
+		  <div class="clear-block">
+            <div id="node-67" class="node">
+
+
+
+  
+  <div class="content clear-block">
+    <!-- google_ad_section_start --><h3>Overview</h3>
+<p>In this example, we are going to show a simple example of how to use PHPGraphLib with MYSQL.</p>
+
+<h3>Include the source file in a new script and create the PHPGraphLib Object</h3>
+<p>Include the source PHPGraphLib class file at the top of your stand alone php script. This script will only include the PHP calls to create your graph. Next, create a PHPGraphLib object.</p>
+
+<div><div id="highlighter_800673" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php plain">&lt;?php</code></div><div class="line number2 index1 alt1"><code class="php keyword">include</code><code class="php plain">(</code><code class="php string">"phpgraphlib.php"</code><code class="php plain">);</code></div><div class="line number3 index2 alt2"><code class="php variable">$graph</code><code class="php plain">=</code><code class="php keyword">new</code> <code class="php plain">PHPGraphLib(550,350); </code></div></div></td></tr></tbody></table></div></div>
+
+<h3>Add data from MYSQL</h3>
+
+<p>We are going to query our database, add that data to an array, and then pass that information to PHPGraphLib. The sales count will be used as y-axis values, and the sales group name will be used as the x -axis values. See <a href="http://www.php.net/mysql" target="_blank">http://www.php.net/mysql</a> for more information on how to connect to your MYSQL server with PHP. You will need to change the system dependent variables, such as username, password, database, and table name when using this example.</p>
+
+<div><div id="highlighter_399172" class="syntaxhighlighter  php"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div><div class="line number5 index4 alt2">5</div><div class="line number6 index5 alt1">6</div><div class="line number7 index6 alt2">7</div><div class="line number8 index7 alt1">8</div><div class="line number9 index8 alt2">9</div><div class="line number10 index9 alt1">10</div><div class="line number11 index10 alt2">11</div><div class="line number12 index11 alt1">12</div><div class="line number13 index12 alt2">13</div><div class="line number14 index13 alt1">14</div><div class="line number15 index14 alt2">15</div><div class="line number16 index15 alt1">16</div><div class="line number17 index16 alt2">17</div><div class="line number18 index17 alt1">18</div><div class="line number19 index18 alt2">19</div><div class="line number20 index19 alt1">20</div><div class="line number21 index20 alt2">21</div><div class="line number22 index21 alt1">22</div><div class="line number23 index22 alt2">23</div><div class="line number24 index23 alt1">24</div><div class="line number25 index24 alt2">25</div><div class="line number26 index25 alt1">26</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="php variable">$link</code> <code class="php plain">= mysql_connect(</code><code class="php string">'localhost'</code><code class="php plain">, </code><code class="php string">'username'</code><code class="php plain">, </code><code class="php string">'password'</code><code class="php plain">)</code></div><div class="line number2 index1 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;</code><code class="php keyword">or</code> <code class="php keyword">die</code><code class="php plain">(</code><code class="php string">'Could not connect: '</code> <code class="php plain">. mysql_error());</code></div><div class="line number3 index2 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;</code>&nbsp;</div><div class="line number4 index3 alt1"><code class="php plain">mysql_select_db(</code><code class="php string">'salestracking'</code><code class="php plain">) </code><code class="php keyword">or</code> <code class="php keyword">die</code><code class="php plain">(</code><code class="php string">'Could not select database'</code><code class="php plain">);</code></div><div class="line number5 index4 alt2"><code class="php spaces">&nbsp;</code>&nbsp;</div><div class="line number6 index5 alt1"><code class="php variable">$dataArray</code><code class="php plain">=</code><code class="php keyword">array</code><code class="php plain">();</code></div><div class="line number7 index6 alt2"><code class="php spaces">&nbsp;</code>&nbsp;</div><div class="line number8 index7 alt1"><code class="php comments">//get data from database</code></div><div class="line number9 index8 alt2"><code class="php variable">$sql</code><code class="php plain">=</code><code class="php string">"SELECT salesgroup, COUNT(*) AS 'count' FROM sales GROUP BY salesgroup"</code><code class="php plain">;</code></div><div class="line number10 index9 alt1"><code class="php variable">$result</code> <code class="php plain">= mysql_query(</code><code class="php variable">$sql</code><code class="php plain">) </code><code class="php keyword">or</code> <code class="php keyword">die</code><code class="php plain">(</code><code class="php string">'Query failed: '</code> <code class="php plain">. mysql_error());</code></div><div class="line number11 index10 alt2"><code class="php keyword">if</code> <code class="php plain">(</code><code class="php variable">$result</code><code class="php plain">) {</code></div><div class="line number12 index11 alt1"><code class="php spaces">&nbsp;&nbsp;</code><code class="php keyword">while</code> <code class="php plain">(</code><code class="php variable">$row</code> <code class="php plain">= mysql_fetch_assoc(</code><code class="php variable">$result</code><code class="php plain">)) {</code></div><div class="line number13 index12 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$salesgroup</code><code class="php plain">=</code><code class="php variable">$row</code><code class="php plain">[</code><code class="php string">"salesgroup"</code><code class="php plain">];</code></div><div class="line number14 index13 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$count</code><code class="php plain">=</code><code class="php variable">$row</code><code class="php plain">[</code><code class="php string">"count"</code><code class="php plain">];</code></div><div class="line number15 index14 alt2"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php comments">//add to data areray</code></div><div class="line number16 index15 alt1"><code class="php spaces">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</code><code class="php variable">$dataArray</code><code class="php plain">[</code><code class="php variable">$salesgroup</code><code class="php plain">]=</code><code class="php variable">$count</code><code class="php plain">;</code></div><div class="line number17 index16 alt2"><code class="php spaces">&nbsp;&nbsp;</code><code class="php plain">}</code></div><div class="line number18 index17 alt1"><code class="php plain">}</code></div><div class="line number19 index18 alt2"><code class="php spaces">&nbsp;</code>&nbsp;</div><div class="line number20 index19 alt1"><code class="php comments">//configure graph</code></div><div class="line number21 index20 alt2"><code class="php variable">$graph</code><code class="php plain">-&gt;addData(</code><code class="php variable">$dataArray</code><code class="php plain">);</code></div><div class="line number22 index21 alt1"><code class="php variable">$graph</code><code class="php plain">-&gt;setTitle(</code><code class="php string">"Sales by Group"</code><code class="php plain">);</code></div><div class="line number23 index22 alt2"><code class="php variable">$graph</code><code class="php plain">-&gt;setGradient(</code><code class="php string">"lime"</code><code class="php plain">, </code><code class="php string">"green"</code><code class="php plain">);</code></div><div class="line number24 index23 alt1"><code class="php variable">$graph</code><code class="php plain">-&gt;setBarOutlineColor(</code><code class="php string">"black"</code><code class="php plain">);</code></div><div class="line number25 index24 alt2"><code class="php variable">$graph</code><code class="php plain">-&gt;createGraph();</code></div><div class="line number26 index25 alt1"><code class="php plain">?&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<h3>Include the created script as the src of an image on the desired page</h3>
+<p>On the page you want the graph to appear, create an HTML image tag and set the src="" to the location of the script you created above.</p>
+
+<div><div id="highlighter_656728" class="syntaxhighlighter  html"><table border="0" cellpadding="0" cellspacing="0"><tbody><tr><td class="gutter"><div class="line number1 index0 alt2">1</div><div class="line number2 index1 alt1">2</div><div class="line number3 index2 alt2">3</div><div class="line number4 index3 alt1">4</div></td><td class="code"><div class="container"><div class="line number1 index0 alt2"><code class="html plain">&lt;</code><code class="html keyword">html</code><code class="html plain">&gt;</code></div><div class="line number2 index1 alt1"><code class="html plain">&lt;</code><code class="html keyword">h3</code><code class="html plain">&gt;This is where I want to display my graph&lt;/</code><code class="html keyword">h3</code><code class="html plain">&gt;</code></div><div class="line number3 index2 alt2"><code class="html plain">&lt;</code><code class="html keyword">img</code> <code class="html color1">src</code><code class="html plain">=</code><code class="html string">"mysql_graph_bar.php"</code> <code class="html plain">/&gt;</code></div><div class="line number4 index3 alt1"><code class="html plain">&lt;/</code><code class="html keyword">html</code><code class="html plain">&gt;</code></div></div></td></tr></tbody></table></div></div>
+
+<p>Here is the graph you just created:</p>
+
+<span class="inline inline-center"><img src="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/example_graph_tutorial_2.png" alt="" title="" class="image image-_original " width="550" height="350"></span>
+
+<p>For other examples, view the <a href="http://www.ebrueggeman.com/phpgraphlib/examples">Examples</a> page</p><!-- google_ad_section_end -->  </div>
+
+  <div class="clear-block">
+    <div class="meta">
+        </div>
+
+      </div>
+
+</div>
+          </div>
+                    <div id="footer"></div>
+      </div></div></div></div> <!-- /.left-corner, /.right-corner, /#squeeze, /#center -->
+
+              <div id="sidebar-right" class="sidebar">
+                    <div id="block-block-1" class="clear-block block block-block">
+
+  <h2>Why use PHPGraphLib</h2>
+
+  <div class="content"><ul id="project_points">
+<li>Slick!</li>
+<li>Easy to use</li>
+<li>Lightweight</li>
+<li>Object oriented design</li>
+<li>Bar, line, stacked bar, and pie charts</li>
+<li>Supports large numbers, decimals, negative numbers, and multiple datasets</li>
+<li>Free for personal use</li>
+<li>Very small fee for <a href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage">commercial use</a></li>
+</ul>
+</div>
+</div>
+<div id="block-block-2" class="clear-block block block-block">
+
+  <h2>Download the Latest</h2>
+
+  <div class="content"><p>New version released on 10/18/2011. Before you download, you must agree to the <a href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage">usage policy</a>.</p>
+<ul>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/download/2.31">PHPGraphLib 2.31 (.zip)</a></li>
+</ul>
+</div>
+</div>
+<div id="block-block-3" class="clear-block block block-block">
+
+  <h2>Documentation</h2>
+
+  <div class="content"><div class="view-header">
+<strong style="margin-bottom: 10px;">Usage</strong>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage">Personal and Commercial Usage Policy</a></span></div>
+</div>
+</div>
+<div class="attachment attachment-after">
+<div class="view view-phpgraphlib-documentation view-id-phpgraphlib_documentation view-display-id-attachment_1 view-dom-id-1">
+<div class="view-header" style="margin-top: 20px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px;">
+<strong style="margin-top: 15px; margin-bottom: 10px;">Tutorials</strong>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-setup-and-simple-example">Tutorial #1: Setup &amp; Simple Example</a></span></div>
+</div>
+<div class="views-row views-row-2 views-row-even" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib.htm">Tutorial #2: MYSQL and PHPGraphLib</a></span></div>
+</div>
+<div class="views-row views-row-3 views-row-odd" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-phpgraphlibpie-extension">Tutorial #3: PHPGraphLibPie Extension</a></span></div>
+</div>
+<div class="views-row views-row-4 views-row-even" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-passing-get-parameters-to-a-graph">Tutorial #4: Passing Parameters to a Graph Script</a></span></div>
+</div>
+<div class="views-row views-row-5 views-row-odd views-row-last" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/examples">Examples</a></span></div>
+</div>
+</div>
+</div>
+<div class="view view-phpgraphlib-documentation view-id-phpgraphlib_documentation view-display-id-attachment_2 view-dom-id-2">
+<div class="view-header" style="margin-top: 20px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px;">
+<strong style="margin-top: 15px; margin-bottom: 10px; ">Function Reference</strong>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference">Function Reference - PHPGraphLib</a></span></div>
+</div>
+<div class="views-row views-row-2 views-row-even" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference-phpgraphlibpie">Function Reference - PHPGraphLibPie </a></span></div>
+</div>
+<div class="views-row views-row-3 views-row-odd views-row-last" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference-phpgraphlibstacked">Function Reference - PHPGraphLibStacked </a></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+      
+	          <div id="bottom-footer">
+          <div id="block-block-12" class="clear-block block block-block">
+
+
+  <div class="content"><div class="left"><a href="http://www.ebrueggeman.com/">Home</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/phpgraphlib">PHPGraphLib</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/skinnytip">SkinnyTip</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/phpweatherlib">PHPWeatherLib</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/blog">Web Development Blog</a></div>
+<div class="right">Site content copyright Elliott Brueggeman, 2011.</div></div>
+</div>
+        </div>
+      	  
+    </div> <!-- /container -->
+  </div>
+<!-- /layout -->
+
+  <div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div><script type="text/javascript" src="./PHPGraphLib Tutorial #2  MYSQL and PHPGraphLib_files/js_a8fe19c945b7d8b25442c848d4bf28ec.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-175053-3"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = "/sites/www.ebrueggeman.com/files/googleanalytics/ga.js?Q";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+  <!-- PAGE GENERATED AT 12-11-06 05:42:56pm -->
+  
+
+</body></html>

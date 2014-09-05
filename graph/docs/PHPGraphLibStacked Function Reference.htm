@@ -1,0 +1,258 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- saved from url=(0090)http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference-phpgraphlibstacked -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" dir="ltr" class="js"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link rel="stylesheet" type="text/css" href="./PHPGraphLibStacked Function Reference_files/widget097.css" media="all">
+
+    
+<link rel="canonical" href="./PHPGraphLibStacked Function Reference_files/PHPGraphLibStacked Function Reference.htm">
+<meta name="description" content="PHP, MYSQL, and web development scripts, tools and resources.">
+<meta property="og:title" content="PHPGraphLibStacked Function Reference">
+<meta property="og:description" content="PHPGraphLibStacked is an extension of the original PHPGraphLib that allows you to make stacked bar chars using the existing PHPGraphLib framework.
+
+Below is the default form of the constructor:
+
+Const">
+<meta property="og:image" content="http://www.ebrueggeman.com/sites/www.ebrueggeman.com/files/images/phpgraphlib_example_graph.img_assist_properties.png">
+<meta property="og:type" content="article">
+<meta property="og:url" content="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference-phpgraphlibstacked">
+<meta property="og:site_name" content="The Website of Elliott Brueggeman">
+<link rel="shortcut icon" href="http://www.ebrueggeman.com/misc/favicon.ico" type="image/x-icon">
+    <title>PHPGraphLibStacked Function Reference</title>
+    <link type="text/css" rel="stylesheet" media="all" href="./PHPGraphLibStacked Function Reference_files/css_8baba62835eb058a43cc4f9d91886b6d.css">
+<link type="text/css" rel="stylesheet" media="print" href="./PHPGraphLibStacked Function Reference_files/css_c349c1c23ed50124e671f399c34a2546.css">
+    <script type="text/javascript" async="" src="./PHPGraphLibStacked Function Reference_files/ga.js"></script><script type="text/javascript" src="./PHPGraphLibStacked Function Reference_files/js_224196e7e4258971ece55267b4ff23ec.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","googleanalytics":{"trackOutgoing":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls|xml|z|zip"},"syntaxhighlighter":[]});
+//--><!]]>
+</script>
+    <!--[if lt IE 7]>
+      <link type="text/css" rel="stylesheet" media="all" href="/sites/all/themes/ebrueggeman/fix-ie.css />    <![endif]-->
+	
+	<script type="text/javascript">
+	jQuery(document).ready(function(){
+	  jQuery('#block-menu-primary-links li').hover(
+		function(){
+		  jQuery('ul:first', $(this)).addClass('menushown').show();
+		},
+		function(){
+		  jQuery('ul', $(this)).hide().removeClass('menushown');
+		}
+	  );
+	});
+	
+	
+	</script>
+	
+	
+  <div style="visibility: hidden; height: 1px; width: 1px; position: absolute; z-index: 100000;" id="_atssh"><iframe id="_atssh576" title="AddThis utility frame" style="height: 1px; width: 1px; position: absolute; z-index: 100000; border: 0px; left: 0px; top: 0px;" src="./PHPGraphLibStacked Function Reference_files/sh103.htm"></iframe></div><script type="text/javascript" src="./PHPGraphLibStacked Function Reference_files/core046.js"></script></head>
+  <body class="sidebar-right">
+<script type="text/javascript" src="./PHPGraphLibStacked Function Reference_files/addthis_widget.js"></script>
+
+  <div id="upper-header-region" class="clear-block"></div>
+
+    <div id="wrapper">
+    <div id="container" class="clear-block">
+
+     <div id="header">
+        <div id="logo-floater">
+        <h1><a href="http://www.ebrueggeman.com/"><span>Elliott Brueggeman - PHP and Web Development Information</span></a></h1>        </div>
+		
+		<div class="green_row">&nbsp;</div>
+		<div id="header-region" class="clear-block"><div id="block-menu-primary-links" class="clear-block block block-menu">
+
+
+  <div class="content"><ul class="menu"><li class="expanded first active-trail menu13"><a href="http://www.ebrueggeman.com/phpgraphlib" title="" class="phpgraphlib graphing library">PHPGraphLib Graphing Library</a><ul class="menu"><li class="leaf first menu1"><a href="http://www.ebrueggeman.com/phpgraphlib" title="" class="overview">Overview</a></li>
+<li class="expanded active-trail menu8"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation" title="" class="documentation">Documentation</a><ul class="menu"><li class="leaf first menu2"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage" title="Personal and Commercial Usage Policy" class="usage policy">Usage Policy</a></li>
+<li class="leaf menu3"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-setup-and-simple-example" title="PHPGraphLib Tutorial #1: Setup &amp; Simple Example" class="tutorial #1">Tutorial #1</a></li>
+<li class="leaf menu4"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-mysql-and-phpgraphlib" title="PHPGraphLib  Tutorial #2: MYSQL and PHPGraphLib" class="tutorial #2">Tutorial #2</a></li>
+<li class="leaf menu5"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-phpgraphlibpie-extension" title="PHPGraphLib Tutorial #3: PHPGraphLibPie Extension" class="tutorial #3">Tutorial #3</a></li>
+<li class="leaf menu6"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-passing-get-parameters-to-a-graph" title="PHPGraphLib Tutorial #4: Passing Parameters to a Graph Script" class="tutorial #4">Tutorial #4</a></li>
+<li class="leaf last menu7"><a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference" title="PHPGraphLib Function Reference" class="function reference">Function Reference</a></li>
+</ul></li>
+<li class="leaf menu9"><a href="http://www.ebrueggeman.com/phpgraphlib/download" title="" class="download">Download</a></li>
+<li class="leaf menu10"><a href="http://www.ebrueggeman.com/phpgraphlib/remote-api" title="PHPGraphlib Remote API" class="remote api">Remote API</a></li>
+<li class="leaf menu11"><a href="http://www.ebrueggeman.com/phpgraphlib/examples" title="PHPGraphLib Examples" class="examples">Examples</a></li>
+<li class="leaf last menu12"><a href="http://www.ebrueggeman.com/phpgraphlib/attribution-logos" title="PHPGraphLib Attribution Logos" class="logos">Logos</a></li>
+</ul></li>
+<li class="expanded menu17"><a href="http://www.ebrueggeman.com/skinnytip" title="SKinnyTip Tooltip LIbrary" class="skinnytip tooltip library">SkinnyTip Tooltip Library</a><ul class="menu"><li class="leaf first menu14"><a href="http://www.ebrueggeman.com/skinnytip" title="" class="overview">Overview</a></li>
+<li class="leaf menu15"><a href="http://www.ebrueggeman.com/skinnytip/documentation" title="SkinnyTip Documentation" class="documentation">Documentation</a></li>
+<li class="leaf last menu16"><a href="http://www.ebrueggeman.com/skinnytip/download" title="SkinnyTip Downloads" class="download">Download</a></li>
+</ul></li>
+<li class="expanded menu21"><a href="http://www.ebrueggeman.com/phpweatherlib" title="PHPWeatherLib PHP Weather Conditions Library" class="phpweatherlib">PHPWeatherLib</a><ul class="menu"><li class="leaf first menu18"><a href="http://www.ebrueggeman.com/phpweatherlib" title="" class="overview">Overview</a></li>
+<li class="leaf menu19"><a href="http://www.ebrueggeman.com/phpweatherlib/documentation" title="PHPWeatherLib Documentation" class="documentation">Documentation</a></li>
+<li class="leaf last menu20"><a href="http://www.ebrueggeman.com/phpweatherlib/download" title="PHPWeatherLib Downloads" class="download">Download</a></li>
+</ul></li>
+<li class="expanded menu24"><a href="http://www.ebrueggeman.com/blog" title="" class="web development blog">Web Development Blog</a><ul class="menu" style="display: none;"><li class="leaf first menu22"><a href="http://www.ebrueggeman.com/blog" title="" class="all blog posts">All Blog Posts</a></li>
+<li class="leaf last menu23"><a href="http://www.ebrueggeman.com/blog/php_performance_benchmarking" title="" class="php performance">PHP Performance</a></li>
+</ul></li>
+<li class="leaf last menu25"><a href="http://www.ebrueggeman.com/contact" title="Contact" class="contact">Contact</a></li>
+</ul></div>
+</div>
+</div>
+
+      </div> <!-- /header -->
+
+      
+      <div id="center"><div id="squeeze"><div class="right-corner"><div class="left-corner">
+          <div class="breadcrumb"><a href="http://www.ebrueggeman.com/">Home</a> › <a href="http://www.ebrueggeman.com/phpgraphlib" title="">PHPGraphLib Graphing Library</a> › <a href="http://www.ebrueggeman.com/phpgraphlib/documentation" title="">Documentation</a></div>                              <h2 class="page-title">PHPGraphLibStacked Function Reference</h2>                              		  
+		  
+                    		  
+		  <div class="clear-block">
+            <div id="node-72" class="node">
+
+
+
+  
+  <div class="content clear-block">
+    <!-- google_ad_section_start --><p>PHPGraphLibStacked is an extension of the original PHPGraphLib that allows you to make stacked bar chars using the existing PHPGraphLib framework.</p>
+<p style="text-align: center;"><img src="./PHPGraphLibStacked Function Reference_files/stacked-graph-example.png"></p>
+<p>Below is the default form of the constructor:</p>
+<div class="function-category">
+<h3>Constructor</h3>
+</div>
+<div class="function">
+<div class="name"><b>PHPGraphLibStacked</b>( int $width, int $height )</div>
+<div class="required">required</div>
+<div class="left">
+<ul>
+<li>$graph=new PHPGraphLibStacked(600,400);</li>
+</ul>
+</div>
+<div class="description">
+<p>PHPGraphLibStacked object constructor. $width and $height arguments are optional. Default width=400, height=300.</p>
+</div>
+</div>
+<p>As with PHPGraphLib, addData() and createGraph() are also required functions.</p>
+<p></p>
+<div class="function-category">
+<h3>PHPGraphLibStacked Functions</h3>
+</div>
+<p>PHPGraphLibStacked inherits most of the same functions as PHPGraphLib, so you can reference the regular <a href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference">PHPGraphLib Function Reference</a> when building a PHPGraphLibStacked graph. A few functions are not usable with PHPGraphLibStacked. Most notably you cannot make a line graph or display data points. Below is a list of functions not usable with PHPGraphLibStacked.</p>
+<div class="function-category">
+<h3>PHPGraphLibStacked <span style="color: red;">Banned Functions</span></h3>
+</div>
+The following standard PHPGraphLib functions are not allowed when using the PHPGraphLib stacked extension.
+<ul>
+<li>setLine()</li>
+<li>setDataPointSize()</li>
+<li>setDataPoints()</li>
+<li>setDataValues()</li>
+</ul><!-- google_ad_section_end -->  </div>
+
+  <div class="clear-block">
+    <div class="meta">
+        </div>
+
+      </div>
+
+</div>
+          </div>
+                    <div id="footer"></div>
+      </div></div></div></div> <!-- /.left-corner, /.right-corner, /#squeeze, /#center -->
+
+              <div id="sidebar-right" class="sidebar">
+                    <div id="block-block-1" class="clear-block block block-block">
+
+  <h2>Why use PHPGraphLib</h2>
+
+  <div class="content"><ul id="project_points">
+<li>Slick!</li>
+<li>Easy to use</li>
+<li>Lightweight</li>
+<li>Object oriented design</li>
+<li>Bar, line, stacked bar, and pie charts</li>
+<li>Supports large numbers, decimals, negative numbers, and multiple datasets</li>
+<li>Free for personal use</li>
+<li>Very small fee for <a href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage">commercial use</a></li>
+</ul>
+</div>
+</div>
+<div id="block-block-2" class="clear-block block block-block">
+
+  <h2>Download the Latest</h2>
+
+  <div class="content"><p>New version released on 10/18/2011. Before you download, you must agree to the <a href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage">usage policy</a>.</p>
+<ul>
+<li><a href="http://www.ebrueggeman.com/phpgraphlib/download/2.31">PHPGraphLib 2.31 (.zip)</a></li>
+</ul>
+</div>
+</div>
+<div id="block-block-3" class="clear-block block block-block">
+
+  <h2>Documentation</h2>
+
+  <div class="content"><div class="view-header">
+<strong style="margin-bottom: 10px;">Usage</strong>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first views-row-last" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/usage">Personal and Commercial Usage Policy</a></span></div>
+</div>
+</div>
+<div class="attachment attachment-after">
+<div class="view view-phpgraphlib-documentation view-id-phpgraphlib_documentation view-display-id-attachment_1 view-dom-id-1">
+<div class="view-header" style="margin-top: 20px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px;">
+<strong style="margin-top: 15px; margin-bottom: 10px;">Tutorials</strong>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-setup-and-simple-example">Tutorial #1: Setup &amp; Simple Example</a></span></div>
+</div>
+<div class="views-row views-row-2 views-row-even" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-mysql-and-phpgraphlib">Tutorial #2: MYSQL and PHPGraphLib</a></span></div>
+</div>
+<div class="views-row views-row-3 views-row-odd" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-phpgraphlibpie-extension">Tutorial #3: PHPGraphLibPie Extension</a></span></div>
+</div>
+<div class="views-row views-row-4 views-row-even" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/tutorial-passing-get-parameters-to-a-graph">Tutorial #4: Passing Parameters to a Graph Script</a></span></div>
+</div>
+<div class="views-row views-row-5 views-row-odd views-row-last" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/examples">Examples</a></span></div>
+</div>
+</div>
+</div>
+<div class="view view-phpgraphlib-documentation view-id-phpgraphlib_documentation view-display-id-attachment_2 view-dom-id-2">
+<div class="view-header" style="margin-top: 20px; margin-right: 0px; margin-bottom: 10px; margin-left: 0px;">
+<strong style="margin-top: 15px; margin-bottom: 10px; ">Function Reference</strong>
+</div>
+<div class="view-content">
+<div class="views-row views-row-1 views-row-odd views-row-first" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference">Function Reference - PHPGraphLib</a></span></div>
+</div>
+<div class="views-row views-row-2 views-row-even" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="http://www.ebrueggeman.com/phpgraphlib/documentation/function-reference-phpgraphlibpie">Function Reference - PHPGraphLibPie </a></span></div>
+</div>
+<div class="views-row views-row-3 views-row-odd views-row-last" style="margin-bottom: 10px; margin-top: 0px; margin-right: 0px; margin-left: 0px;">
+<div class="views-field-path"><span class="field-content"><a style="color: #005123;" href="./PHPGraphLibStacked Function Reference_files/PHPGraphLibStacked Function Reference.htm">Function Reference - PHPGraphLibStacked </a></span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+        </div>
+      
+	          <div id="bottom-footer">
+          <div id="block-block-12" class="clear-block block block-block">
+
+
+  <div class="content"><div class="left"><a href="http://www.ebrueggeman.com/">Home</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/phpgraphlib">PHPGraphLib</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/skinnytip">SkinnyTip</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/phpweatherlib">PHPWeatherLib</a> &nbsp;|&nbsp; <a href="http://www.ebrueggeman.com/blog">Web Development Blog</a></div>
+<div class="right">Site content copyright Elliott Brueggeman, 2011.</div></div>
+</div>
+        </div>
+      	  
+    </div> <!-- /container -->
+  </div>
+<!-- /layout -->
+
+  <div id="tiplayer" style="position:absolute; visibility:hidden; z-index:10000;"></div><script type="text/javascript" src="./PHPGraphLibStacked Function Reference_files/js_a8fe19c945b7d8b25442c848d4bf28ec.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _gaq = _gaq || [];_gaq.push(["_setAccount", "UA-175053-3"]);_gaq.push(["_trackPageview"]);(function() {var ga = document.createElement("script");ga.type = "text/javascript";ga.async = true;ga.src = "/sites/www.ebrueggeman.com/files/googleanalytics/ga.js?Q";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(ga, s);})();
+//--><!]]>
+</script>
+  <!-- PAGE GENERATED AT 12-11-07 05:00:08am -->
+  
+
+</body></html>

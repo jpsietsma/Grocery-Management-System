@@ -1,0 +1,16 @@
+#page-heading 
+		{ 
+		
+		font-weight: bold; 
+		font-size: 15px; 
+		text-decoration: underline; 
+		margin: 0 auto 0;
+		
+		}
+
+#nav-right
+		{
+
+		display: none;
+		
+		}
